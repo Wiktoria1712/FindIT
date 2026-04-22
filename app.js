@@ -1,15 +1,15 @@
 const catalog = {
   "Nutella 350g": [
     {
-      name: "Żabka Puławska 24",
-      chain: "Żabka",
+      name: "Zabka Pulawska 24",
+      chain: "Zabka",
       distance: 0.4,
       price: 13.99,
       stock: 12,
       status: "good",
-      eta: "3 min pieszo",
+      eta: "3 min walk",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 68,
       y: 38
     },
@@ -20,35 +20,35 @@ const catalog = {
       price: 12.49,
       stock: 4,
       status: "warn",
-      eta: "5 min autem",
+      eta: "5 min drive",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 52,
       y: 54
     },
     {
-      name: "Sklep osiedlowy u Ani",
-      chain: "Lokalny",
+      name: "Local Store U Ani",
+      chain: "Local",
       distance: 1.1,
       price: 14.5,
       stock: 2,
       status: "warn",
-      eta: "9 min pieszo",
+      eta: "9 min walk",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 31,
       y: 41
     },
     {
-      name: "Lidl Wołoska",
+      name: "Lidl Woloska",
       chain: "Lidl",
       distance: 1.7,
       price: 11.99,
       stock: 19,
       status: "good",
-      eta: "6 min autem",
+      eta: "6 min drive",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 24,
       y: 68
     },
@@ -59,9 +59,9 @@ const catalog = {
       price: 12.99,
       stock: 0,
       status: "bad",
-      eta: "11 min autem",
+      eta: "11 min drive",
       reservation: false,
-      district: "Wilanów",
+      district: "Wilanow",
       x: 79,
       y: 73
     }
@@ -74,22 +74,22 @@ const catalog = {
       price: 6.49,
       stock: 16,
       status: "good",
-      eta: "5 min autem",
+      eta: "5 min drive",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 52,
       y: 54
     },
     {
-      name: "Żabka Puławska 24",
-      chain: "Żabka",
+      name: "Zabka Pulawska 24",
+      chain: "Zabka",
       distance: 0.4,
       price: 7.19,
       stock: 5,
       status: "warn",
-      eta: "3 min pieszo",
+      eta: "3 min walk",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 68,
       y: 38
     },
@@ -100,50 +100,50 @@ const catalog = {
       price: 5.99,
       stock: 24,
       status: "good",
-      eta: "7 min autem",
+      eta: "7 min drive",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 45,
       y: 77
     },
     {
-      name: "Sklep osiedlowy u Ani",
-      chain: "Lokalny",
+      name: "Local Store U Ani",
+      chain: "Local",
       distance: 1.1,
       price: 7.49,
       stock: 0,
       status: "bad",
-      eta: "9 min pieszo",
+      eta: "9 min walk",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 31,
       y: 41
     }
   ],
-  "Mleko 2% 1L": [
+  "Milk 2% 1L": [
     {
-      name: "Żabka Puławska 24",
-      chain: "Żabka",
+      name: "Zabka Pulawska 24",
+      chain: "Zabka",
       distance: 0.4,
       price: 4.39,
       stock: 8,
       status: "good",
-      eta: "3 min pieszo",
+      eta: "3 min walk",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 68,
       y: 38
     },
     {
-      name: "Lidl Wołoska",
+      name: "Lidl Woloska",
       chain: "Lidl",
       distance: 1.7,
       price: 3.79,
       stock: 31,
       status: "good",
-      eta: "6 min autem",
+      eta: "6 min drive",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 24,
       y: 68
     },
@@ -154,24 +154,24 @@ const catalog = {
       price: 4.15,
       stock: 3,
       status: "warn",
-      eta: "5 min autem",
+      eta: "5 min drive",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 52,
       y: 54
     }
   ],
-  "Kawa ziarnista 1kg": [
+  "Coffee beans 1kg": [
     {
-      name: "Lidl Wołoska",
+      name: "Lidl Woloska",
       chain: "Lidl",
       distance: 1.7,
       price: 42.99,
       stock: 14,
       status: "good",
-      eta: "6 min autem",
+      eta: "6 min drive",
       reservation: false,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 24,
       y: 68
     },
@@ -182,9 +182,9 @@ const catalog = {
       price: 39.99,
       stock: 6,
       status: "warn",
-      eta: "11 min autem",
+      eta: "11 min drive",
       reservation: false,
-      district: "Wilanów",
+      district: "Wilanow",
       x: 79,
       y: 73
     },
@@ -195,9 +195,9 @@ const catalog = {
       price: 46.99,
       stock: 0,
       status: "bad",
-      eta: "5 min autem",
+      eta: "5 min drive",
       reservation: true,
-      district: "Mokotów",
+      district: "Mokotow",
       x: 52,
       y: 54
     }
@@ -206,18 +206,18 @@ const catalog = {
 
 const statusMeta = {
   good: {
-    label: "Dostępny",
-    note: "Produkt jest na stanie i gotowy do zakupu.",
+    label: "Available",
+    note: "The product is in stock and ready to buy.",
     className: "status-good"
   },
   warn: {
-    label: "Mało sztuk",
-    note: "Stan niski. Warto zarezerwować przed wyjściem.",
+    label: "Low stock",
+    note: "Stock is limited. Reserve before you leave.",
     className: "status-warn"
   },
   bad: {
-    label: "Brak produktu",
-    note: "Aktualnie niedostępny w tym sklepie.",
+    label: "Out of stock",
+    note: "Currently unavailable in this store.",
     className: "status-bad"
   }
 };
@@ -254,7 +254,7 @@ function getStatusWeight(status) {
 }
 
 function formatPrice(price) {
-  return `${price.toFixed(2).replace(".", ",")} zł`;
+  return `${price.toFixed(2).replace(".", ",")} PLN`;
 }
 
 function filterAndSortStores(productName) {
@@ -283,14 +283,14 @@ function renderResults(productName) {
   const availableCount = stores.filter((store) => store.status === "good").length;
   const reservableCount = stores.filter((store) => store.reservation && store.status !== "bad").length;
 
-  resultsTitle.textContent = `Sklepy z produktem: ${productName}`;
-  resultsSummary.textContent = `${stores.length} sklepów w promieniu • ${availableCount} dostępnych od ręki • ${reservableCount} z rezerwacją`;
+  resultsTitle.textContent = `Stores with product: ${productName}`;
+  resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now - ${reservableCount} with reservation`;
 
   if (!stores.length) {
     resultsList.innerHTML = `
       <div class="empty-state">
-        <h3>Brak wyników w wybranym promieniu</h3>
-        <p>Poszerz promień wyszukiwania albo wybierz inny produkt z proponowanych tagów powyżej.</p>
+        <h3>No results in the selected radius</h3>
+        <p>Increase the search radius or choose another product from the suggested tags above.</p>
       </div>
     `;
     mapGrid.innerHTML = "";
@@ -300,7 +300,7 @@ function renderResults(productName) {
   resultsList.innerHTML = stores
     .map((store) => {
       const meta = statusMeta[store.status];
-      const reservationLabel = store.reservation && store.status !== "bad" ? "Rezerwuj online" : "Nawiguj do sklepu";
+      const reservationLabel = store.reservation && store.status !== "bad" ? "Reserve online" : "Navigate to store";
 
       return `
         <article class="store-card">
@@ -309,9 +309,9 @@ function renderResults(productName) {
               <h3>${store.name}</h3>
               <div class="store-meta">
                 <span>${store.chain}</span>
-                <span>•</span>
+                <span>-</span>
                 <span>${store.district}</span>
-                <span>•</span>
+                <span>-</span>
                 <span>${store.distance.toFixed(1).replace(".", ",")} km</span>
               </div>
             </div>
@@ -320,7 +320,7 @@ function renderResults(productName) {
 
           <div class="store-stock">
             <span class="store-price">${formatPrice(store.price)}</span>
-            <span class="stock-pill ${meta.className}">${store.stock > 0 ? `${store.stock} szt.` : "0 szt."}</span>
+            <span class="stock-pill ${meta.className}">${store.stock > 0 ? `${store.stock} pcs` : "0 pcs"}</span>
             <span>${store.eta}</span>
           </div>
 
@@ -328,7 +328,7 @@ function renderResults(productName) {
 
           <div class="store-actions">
             <a class="action-link" href="#map-grid">${reservationLabel}</a>
-            <a class="action-link" href="#partners">Zgłoś sklep do partnerstwa</a>
+            <a class="action-link" href="#partners">Join as a partner store</a>
           </div>
         </article>
       `;
@@ -341,7 +341,7 @@ function renderResults(productName) {
       return `
         <div class="map-pin" style="left:${store.x}%; top:${store.y}%;">
           <span class="pin-dot ${meta.className}"></span>
-          <span class="pin-label">${store.chain} • ${meta.label}</span>
+          <span class="pin-label">${store.chain} - ${meta.label}</span>
         </div>
       `;
     })

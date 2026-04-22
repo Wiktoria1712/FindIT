@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FindIT - znajdź produkt w sklepie obok</title>
+  <title>FindIT - find a product in a nearby store</title>
   <meta name="theme-color" content="#dd5f2d">
-  <meta name="description" content="FindIT to PWA do sprawdzania dostępności produktów w sklepach w Twojej okolicy.">
+  <meta name="description" content="FindIT is a PWA for checking product availability in stores near you.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,64 +21,64 @@
         <span>FindIT</span>
       </a>
       <nav class="topnav">
-        <a href="#how-it-works">Jak to działa</a>
-        <a href="#results">Sklepy</a>
-        <a href="#partners">Partnerzy</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#results">Stores</a>
+        <a href="#partners">Partners</a>
       </nav>
     </header>
 
     <main id="home">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Dostępność produktów w czasie zbliżonym do rzeczywistego</p>
-          <h1>Znajdź produkt od ręki, zanim ruszysz do sklepu.</h1>
+          <p class="eyebrow">Near real-time product availability</p>
+          <h1>Find the product before you leave for the store.</h1>
           <p class="hero-text">
-            Wpisz nazwę produktu i sprawdź, który sklep w Twojej okolicy ma go teraz na półce.
-            Bez jeżdżenia po mieście, bez pustych wizyt, bez zgadywania.
+            Enter a product name and instantly see which nearby store has it on the shelf right now.
+            No driving around town, no wasted trips, no guesswork.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#search-panel">Sprawdź dostępność</a>
-            <a class="button button-secondary" href="#partners">Zobacz model współpracy</a>
+            <a class="button button-primary" href="#search-panel">Check availability</a>
+            <a class="button button-secondary" href="#partners">See partner model</a>
           </div>
           <div class="trust-row">
             <span>Carrefour</span>
             <span>Lidl</span>
-            <span>Żabka</span>
+            <span>Zabka</span>
             <span>Dino</span>
-            <span>Sklepy lokalne</span>
+            <span>Local stores</span>
           </div>
         </div>
 
         <aside class="hero-card">
-          <p class="card-kicker">Przykładowe wyszukiwanie</p>
+          <p class="card-kicker">Sample search</p>
           <div class="sample-search">
             <span class="sample-chip">Nutella 350g</span>
             <span class="sample-chip">Pepsi Max</span>
-            <span class="sample-chip">Mleko 2%</span>
+            <span class="sample-chip">Milk 2%</span>
           </div>
           <div class="snapshot">
             <div>
               <strong>23</strong>
-              <span>sklepy w zasięgu</span>
+              <span>stores nearby</span>
             </div>
             <div>
               <strong>8</strong>
-              <span>produkt dostępny</span>
+              <span>product in stock</span>
             </div>
             <div>
               <strong>3 min</strong>
-              <span>najbliższy dojazd</span>
+              <span>fastest route</span>
             </div>
           </div>
-          <p class="snapshot-note">Widok demonstracyjny MVP. Dane poniżej są przykładowe i gotowe do podpięcia pod API sieci handlowych.</p>
+          <p class="snapshot-note">MVP demo view. The data below is sample data and ready to be connected to retail API integrations.</p>
         </aside>
       </section>
 
       <section class="search-panel" id="search-panel">
         <div class="panel-heading">
           <div>
-            <p class="section-kicker">Wyszukiwarka</p>
-            <h2>Sprawdź produkt w sklepach obok Ciebie</h2>
+            <p class="section-kicker">Search</p>
+            <h2>Check a product in stores around you</h2>
           </div>
           <div class="live-badge">
             <span class="live-dot"></span>
@@ -88,36 +88,36 @@
 
         <form id="search-form" class="search-form">
           <label class="field field-search">
-            <span>Produkt</span>
-            <input id="product-input" type="text" value="Nutella 350g" placeholder="np. Nutella 350g, Pepsi Max, mleko 2%">
+            <span>Product</span>
+            <input id="product-input" type="text" value="Nutella 350g" placeholder="e.g. Nutella 350g, Pepsi Max, milk 2%">
           </label>
 
           <label class="field">
-            <span>Promień</span>
+            <span>Radius</span>
             <select id="radius-select">
-              <option value="1.5">do 1,5 km</option>
-              <option value="3" selected>do 3 km</option>
-              <option value="5">do 5 km</option>
+              <option value="1.5">up to 1.5 km</option>
+              <option value="3" selected>up to 3 km</option>
+              <option value="5">up to 5 km</option>
             </select>
           </label>
 
           <label class="field">
-            <span>Sortowanie</span>
+            <span>Sort by</span>
             <select id="sort-select">
-              <option value="distance">Najbliżej</option>
-              <option value="availability">Najlepsza dostępność</option>
-              <option value="price">Najniższa cena</option>
+              <option value="distance">Nearest</option>
+              <option value="availability">Best availability</option>
+              <option value="price">Lowest price</option>
             </select>
           </label>
 
-          <button type="submit" class="button button-primary button-submit">Szukaj teraz</button>
+          <button type="submit" class="button button-primary button-submit">Search now</button>
         </form>
 
         <div class="quick-tags" id="quick-tags">
           <button type="button" class="tag is-active" data-product="Nutella 350g">Nutella 350g</button>
           <button type="button" class="tag" data-product="Pepsi Max 1.5L">Pepsi Max 1.5L</button>
-          <button type="button" class="tag" data-product="Mleko 2% 1L">Mleko 2% 1L</button>
-          <button type="button" class="tag" data-product="Kawa ziarnista 1kg">Kawa ziarnista 1kg</button>
+          <button type="button" class="tag" data-product="Milk 2% 1L">Milk 2% 1L</button>
+          <button type="button" class="tag" data-product="Coffee beans 1kg">Coffee beans 1kg</button>
         </div>
       </section>
 
@@ -126,8 +126,8 @@
           <div class="results-column">
             <div class="results-header">
               <div>
-                <p class="section-kicker">Wyniki</p>
-                <h2 id="results-title">Sklepy z produktem: Nutella 350g</h2>
+                <p class="section-kicker">Results</p>
+                <h2 id="results-title">Stores with product: Nutella 350g</h2>
               </div>
               <div class="results-summary" id="results-summary"></div>
             </div>
@@ -137,14 +137,14 @@
           <aside class="map-card">
             <div class="map-card-header">
               <div>
-                <p class="section-kicker">Mapa okolicy</p>
-                <h2>Podgląd sklepów</h2>
+                <p class="section-kicker">Local map</p>
+                <h2>Store preview</h2>
               </div>
-              <span class="map-badge">Warszawa • Mokotów</span>
+              <span class="map-badge">Warsaw - Mokotow</span>
             </div>
-            <div id="map-grid" class="map-grid" aria-label="Poglądowa mapa sklepów"></div>
+            <div id="map-grid" class="map-grid" aria-label="Illustrative store map"></div>
             <p class="map-note">
-              W wersji produkcyjnej ten panel można podpiąć do Google Maps, Mapbox lub OpenStreetMap i prowadzić klienta do wybranego sklepu.
+              In the production version, this panel can be connected to Google Maps, Mapbox, or OpenStreetMap and guide the customer to the selected store.
             </p>
           </aside>
         </div>
@@ -152,74 +152,74 @@
 
       <section class="how-it-works" id="how-it-works">
         <div class="section-heading">
-          <p class="section-kicker">Jak to działa</p>
-          <h2>Prosty przepływ dla klienta, mocna wartość dla sklepów</h2>
+          <p class="section-kicker">How it works</p>
+          <h2>Simple for shoppers, valuable for stores</h2>
         </div>
         <div class="steps">
           <article class="step-card">
             <span class="step-number">01</span>
-            <h3>Wpisujesz produkt</h3>
-            <p>Klient podaje nazwę, gramaturę lub markę, a aplikacja dopasowuje produkt do katalogu.</p>
+            <h3>Enter a product</h3>
+            <p>The shopper types a name, size, or brand, and the app matches it to the product catalog.</p>
           </article>
           <article class="step-card">
             <span class="step-number">02</span>
-            <h3>System sprawdza stany</h3>
-            <p>Platforma odpytuje sieci i sklepy lokalne przez API, POS lub eksporty ERP.</p>
+            <h3>The system checks stock</h3>
+            <p>The platform queries retail chains and local stores through API, POS, or ERP exports.</p>
           </article>
           <article class="step-card">
             <span class="step-number">03</span>
-            <h3>Widzisz najlepszą opcję</h3>
-            <p>Dostajesz listę sklepów z ceną, odległością, dostępnością i możliwością rezerwacji.</p>
+            <h3>See the best option</h3>
+            <p>You get a list of stores with price, distance, availability, and reservation options.</p>
           </article>
         </div>
       </section>
 
       <section class="partners" id="partners">
         <div class="section-heading">
-          <p class="section-kicker">Partnerstwa</p>
-          <h2>Dlaczego sklepy chcą być w takim systemie</h2>
+          <p class="section-kicker">Partnerships</p>
+          <h2>Why stores want to be part of this system</h2>
         </div>
         <div class="partner-grid">
           <article class="partner-card">
-            <h3>Więcej klientów przy półce</h3>
-            <p>Sklep pojawia się dokładnie wtedy, gdy klient ma konkretną intencję zakupową.</p>
+            <h3>More customers at the shelf</h3>
+            <p>The store appears exactly when a customer has clear purchase intent.</p>
           </article>
           <article class="partner-card">
-            <h3>Mniej frustracji</h3>
-            <p>Klient nie trafia na pusty regał, więc nie zniechęca się do marki ani punktu sprzedaży.</p>
+            <h3>Less frustration</h3>
+            <p>Customers avoid empty shelves, which reduces disappointment with both the brand and the store.</p>
           </article>
           <article class="partner-card">
-            <h3>Dane o popycie</h3>
-            <p>Sieci mogą analizować najczęściej wyszukiwane produkty i reagować szybciej na lokalny popyt.</p>
+            <h3>Demand insights</h3>
+            <p>Retailers can analyze the most searched products and react faster to local demand.</p>
           </article>
           <article class="partner-card accent-card">
-            <h3>Gotowe pod integracje</h3>
-            <p>To MVP jest przygotowane do dalszego rozwoju o logowanie, rezerwacje i prawdziwe integracje magazynowe.</p>
+            <h3>Ready for integrations</h3>
+            <p>This MVP is ready to grow with authentication, reservations, and real inventory integrations.</p>
           </article>
         </div>
       </section>
 
       <section class="schema-section" id="schema">
         <div class="section-heading">
-          <p class="section-kicker">Schema PWA</p>
-          <h2>Jak działa baza danych tej aplikacji</h2>
+          <p class="section-kicker">PWA schema</p>
+          <h2>How this app database works</h2>
         </div>
         <div class="schema-grid">
           <article class="partner-card">
             <h3><code>products</code></h3>
-            <p>Przechowuje główne produkty, ich markę, wariant, gramaturę, kod kreskowy i kategorię. To centralny punkt wyszukiwania po nazwie.</p>
+            <p>Stores the main products, their brand, variant, size, barcode, and category. This is the central search layer.</p>
           </article>
           <article class="partner-card">
             <h3><code>stores</code></h3>
-            <p>Zawiera sklepy, lokalizację, godziny otwarcia, typ sklepu, współrzędne i parametry integracji z partnerem handlowym.</p>
+            <p>Contains stores, location, opening hours, store type, coordinates, and integration settings for each retail partner.</p>
           </article>
           <article class="partner-card">
             <h3><code>inventory_snapshots</code></h3>
-            <p>Tu trafiają aktualne stany magazynowe dla produktu w konkretnym sklepie wraz z ceną, czasem synchronizacji i statusem dostępności.</p>
+            <p>Holds current stock levels for a product in a specific store together with price, sync timestamp, and availability status.</p>
           </article>
           <article class="partner-card accent-card">
-            <h3><code>reservations</code> i <code>search_events</code></h3>
-            <p>Rezerwacje pomagają klientowi odebrać produkt, a logi wyszukiwań pokazują realny popyt i wspierają analitykę dla sieci.</p>
+            <h3><code>reservations</code> and <code>search_events</code></h3>
+            <p>Reservations help customers secure a product, while search logs reveal demand patterns and support retailer analytics.</p>
           </article>
         </div>
       </section>
