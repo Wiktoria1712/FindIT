@@ -1,4 +1,4 @@
-const CACHE_NAME = "findit-v1";
+const CACHE_NAME = "localfinder-v2";
 const APP_ASSETS = [
   "./",
   "./index.html",
