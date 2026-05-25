@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">LocalFinder</title>
+  <desc id="desc">App icon for finding products in neighborhood stores.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dd5f2d"/>
+      <stop offset="100%" stop-color="#ffb074"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#fff7ee"/>
+  <rect x="24" y="24" width="208" height="208" rx="48" fill="url(#grad)"/>
+  <path d="M88 78c0-8.837 7.163-16 16-16h48c22.091 0 40 17.909 40 40 0 18.462-12.51 34.002-29.5 38.61L184 182h-32l-18.5-35H120v35H88V78Zm32 42h28c9.941 0 18-8.059 18-18s-8.059-18-18-18h-28v36Z" fill="#fff7ee"/>
+  <circle cx="89" cy="181" r="17" fill="#1f1a17" opacity="0.14"/>
+  <path d="M89 165c8.837 0 16 7.163 16 16s-7.163 16-16 16-16-7.163-16-16 7.163-16 16-16Zm52-14 42 42" stroke="#fff7ee" stroke-width="14" stroke-linecap="round"/>
+</svg>

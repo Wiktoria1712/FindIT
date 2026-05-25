@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalFinder - find products in neighborhood stores</title>
+  <meta name="theme-color" content="#dd5f2d">
+  <meta name="description" content="LocalFinder helps people find products in nearby neighborhood stores.">
+  <link rel="manifest" href="localfinder.webmanifest">
+  <link rel="icon" href="localfinder-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">
+        <span class="brand-mark">LF</span>
+        <span>LocalFinder</span>
+      </a>
+      <nav class="topnav">
+        <a href="#how-it-works">How it works</a>
+        <a href="#results">Stores</a>
+        <a href="#partners">Partners</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Neighborhood store product availability</p>
+          <h1>Find what you need at a local store nearby.</h1>
+          <p class="hero-text">
+            Enter a product name and instantly see which nearby local shop has it available right now.
+            Support neighborhood businesses, save time, and skip unnecessary trips.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#search-panel">Check availability</a>
+            <a class="button button-secondary" href="#partners">See local partner model</a>
+          </div>
+          <div class="trust-row">
+            <span>ABC Grocery</span>
+            <span>Mark's Corner Shop</span>
+            <span>Green Basket</span>
+            <span>FreshMart Local</span>
+            <span>Neighborhood stores</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p class="card-kicker">Sample search</p>
+          <div class="sample-search">
+            <span class="sample-chip">Nutella 350g</span>
+            <span class="sample-chip">Pepsi Max</span>
+            <span class="sample-chip">Fresh milk 1L</span>
+          </div>
+          <div class="snapshot">
+            <div>
+              <strong>23</strong>
+              <span>local stores nearby</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>product in stock</span>
+            </div>
+            <div>
+              <strong>3 min</strong>
+              <span>fastest route</span>
+            </div>
+          </div>
+          <p class="snapshot-note">MVP demo view. The sample below is designed for local grocery shops and independent retailers.</p>
+        </aside>
+      </section>
+
+      <section class="search-panel" id="search-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">Search</p>
+            <h2>Check a product in local stores around you</h2>
+          </div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            Demo live inventory
+          </div>
+        </div>
+
+        <form id="search-form" class="search-form">
+          <label class="field field-search">
+            <span>Product</span>
+            <input id="product-input" type="text" value="Nutella 350g" placeholder="e.g. Nutella 350g, Pepsi Max, fresh milk 1L">
+          </label>
+
+          <label class="field">
+            <span>Radius</span>
+            <select id="radius-select">
+              <option value="1.5">up to 1.5 km</option>
+              <option value="3" selected>up to 3 km</option>
+              <option value="5">up to 5 km</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Sort by</span>
+            <select id="sort-select">
+              <option value="distance">Nearest</option>
+              <option value="availability">Best availability</option>
+              <option value="price">Lowest price</option>
+            </select>
+          </label>
+
+          <button type="submit" class="button button-primary button-submit">Search now</button>
+        </form>
+
+        <div class="quick-tags" id="quick-tags">
+          <button type="button" class="tag is-active" data-product="Nutella 350g">Nutella 350g</button>
+          <button type="button" class="tag" data-product="Pepsi Max 1.5L">Pepsi Max 1.5L</button>
+          <button type="button" class="tag" data-product="Fresh milk 1L">Fresh milk 1L</button>
+          <button type="button" class="tag" data-product="Coffee beans 1kg">Coffee beans 1kg</button>
+        </div>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="results-layout">
+          <div class="results-column">
+            <div class="results-header">
+              <div>
+                <p class="section-kicker">Results</p>
+                <h2 id="results-title">Local stores with product: Nutella 350g</h2>
+              </div>
+              <div class="results-summary" id="results-summary"></div>
+            </div>
+            <div id="results-list" class="results-list"></div>
+          </div>
+
+          <aside class="map-card">
+            <div class="map-card-header">
+              <div>
+                <p class="section-kicker">Local map</p>
+                <h2>Neighborhood store preview</h2>
+              </div>
+              <span class="map-badge">Warsaw - Mokotow</span>
+            </div>
+            <div id="map-grid" class="map-grid" aria-label="Illustrative store map"></div>
+            <p class="map-note">
+              In the production version, this panel can be connected to Google Maps, Mapbox, or OpenStreetMap and guide the customer to the selected neighborhood store.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="localfinder-app.js"></script>
+</body>
+</html>
