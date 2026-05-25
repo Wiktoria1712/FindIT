@@ -91,6 +91,15 @@ select {
   display: flex;
   gap: 18px;
   color: var(--muted);
+  align-items: center;
+}
+
+.topnav-cta {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(135deg, #1f1a17, #53392b);
+  box-shadow: 0 12px 24px rgba(31, 26, 23, 0.18);
 }
 
 .hero {
@@ -149,6 +158,22 @@ select {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--muted);
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hero-highlights span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(221, 95, 45, 0.1);
+  border: 1px solid rgba(221, 95, 45, 0.16);
+  color: var(--brand-dark);
+  font-weight: 700;
 }
 
 .hero-actions {
@@ -212,6 +237,29 @@ select {
   justify-content: space-between;
 }
 
+.hero-card-banner,
+.owner-banner {
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(221, 95, 45, 0.12), rgba(255, 176, 116, 0.18));
+  border: 1px solid rgba(221, 95, 45, 0.16);
+}
+
+.hero-card-banner strong,
+.owner-banner strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+}
+
+.hero-card-banner span,
+.owner-banner span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .sample-search {
   display: flex;
   flex-wrap: wrap;
@@ -251,6 +299,34 @@ select {
 .partners,
 .results-section {
   margin-top: 24px;
+}
+
+.micro-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.benefit-card {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 244, 0.86);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.benefit-card strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+}
+
+.benefit-card span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .search-panel {
@@ -560,6 +636,7 @@ select {
 @media (max-width: 1050px) {
   .hero,
   .results-layout,
+  .micro-benefits,
   .steps,
   .partner-grid,
   .schema-grid {
