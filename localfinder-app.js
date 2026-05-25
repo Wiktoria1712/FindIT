@@ -1,26 +1,26 @@
 const catalog = {
   "Nutella 350g": [
-    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 13.99, stock: 12, status: "good", eta: "3 min walk", reservation: true, district: "Old Town", x: 68, y: 38 },
-    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 12.49, stock: 4, status: "warn", eta: "5 min drive", reservation: true, district: "Old Town", x: 52, y: 54 },
+    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 13.99, stock: 12, status: "good", eta: "3 min walk", reservation: false, district: "Old Town", x: 68, y: 38 },
+    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 12.49, stock: 4, status: "warn", eta: "5 min drive", reservation: false, district: "Old Town", x: 52, y: 54 },
     { name: "Family Market by Anna", chain: "Neighborhood Market", distance: 1.1, price: 14.5, stock: 2, status: "warn", eta: "9 min walk", reservation: false, district: "Riverside", x: 31, y: 41 },
     { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 11.99, stock: 19, status: "good", eta: "6 min drive", reservation: false, district: "Riverside", x: 24, y: 68 },
     { name: "FreshMart Local", chain: "Independent Store", distance: 3.6, price: 12.99, stock: 0, status: "bad", eta: "11 min drive", reservation: false, district: "Garden District", x: 79, y: 73 }
   ],
   "Pepsi Max 1.5L": [
-    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 6.49, stock: 16, status: "good", eta: "5 min drive", reservation: true, district: "Old Town", x: 52, y: 54 },
-    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 7.19, stock: 5, status: "warn", eta: "3 min walk", reservation: true, district: "Old Town", x: 68, y: 38 },
+    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 6.49, stock: 16, status: "good", eta: "5 min drive", reservation: false, district: "Old Town", x: 52, y: 54 },
+    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 7.19, stock: 5, status: "warn", eta: "3 min walk", reservation: false, district: "Old Town", x: 68, y: 38 },
     { name: "FreshMart Local", chain: "Independent Store", distance: 1.3, price: 5.99, stock: 24, status: "good", eta: "7 min drive", reservation: false, district: "Riverside", x: 45, y: 77 },
     { name: "Family Market by Anna", chain: "Neighborhood Market", distance: 1.1, price: 7.49, stock: 0, status: "bad", eta: "9 min walk", reservation: false, district: "Riverside", x: 31, y: 41 }
   ],
   "Fresh milk 1L": [
-    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 4.39, stock: 8, status: "good", eta: "3 min walk", reservation: true, district: "Old Town", x: 68, y: 38 },
+    { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 4.39, stock: 8, status: "good", eta: "3 min walk", reservation: false, district: "Old Town", x: 68, y: 38 },
     { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 3.79, stock: 31, status: "good", eta: "6 min drive", reservation: false, district: "Riverside", x: 24, y: 68 },
-    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 4.15, stock: 3, status: "warn", eta: "5 min drive", reservation: true, district: "Old Town", x: 52, y: 54 }
+    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 4.15, stock: 3, status: "warn", eta: "5 min drive", reservation: false, district: "Old Town", x: 52, y: 54 }
   ],
   "Coffee beans 1kg": [
     { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 42.99, stock: 14, status: "good", eta: "6 min drive", reservation: false, district: "Riverside", x: 24, y: 68 },
     { name: "FreshMart Local", chain: "Independent Store", distance: 3.6, price: 39.99, stock: 6, status: "warn", eta: "11 min drive", reservation: false, district: "Garden District", x: 79, y: 73 },
-    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 46.99, stock: 0, status: "bad", eta: "5 min drive", reservation: true, district: "Old Town", x: 52, y: 54 }
+    { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 46.99, stock: 0, status: "bad", eta: "5 min drive", reservation: false, district: "Old Town", x: 52, y: 54 }
   ]
 };
 

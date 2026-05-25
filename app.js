@@ -8,7 +8,7 @@ const catalog = {
       stock: 12,
       status: "good",
       eta: "3 min walk",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 68,
       y: 38
@@ -21,7 +21,7 @@ const catalog = {
       stock: 4,
       status: "warn",
       eta: "5 min drive",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 52,
       y: 54
@@ -75,7 +75,7 @@ const catalog = {
       stock: 16,
       status: "good",
       eta: "5 min drive",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 52,
       y: 54
@@ -88,7 +88,7 @@ const catalog = {
       stock: 5,
       status: "warn",
       eta: "3 min walk",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 68,
       y: 38
@@ -129,7 +129,7 @@ const catalog = {
       stock: 8,
       status: "good",
       eta: "3 min walk",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 68,
       y: 38
@@ -155,7 +155,7 @@ const catalog = {
       stock: 3,
       status: "warn",
       eta: "5 min drive",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 52,
       y: 54
@@ -196,7 +196,7 @@ const catalog = {
       stock: 0,
       status: "bad",
       eta: "5 min drive",
-      reservation: true,
+      reservation: false,
       district: "Old Town",
       x: 52,
       y: 54
