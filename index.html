@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FindIT - find a product in a nearby store</title>
+  <title>LocalFinder - find products in neighborhood stores</title>
   <meta name="theme-color" content="#dd5f2d">
-  <meta name="description" content="FindIT is a PWA for checking product availability in stores near you.">
+  <meta name="description" content="LocalFinder helps people find products in nearby neighborhood stores.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,8 @@
   <div class="page-shell">
     <header class="topbar">
       <a class="brand" href="#home">
-        <span class="brand-mark">FI</span>
-        <span>FindIT</span>
+        <span class="brand-mark">LF</span>
+        <span>LocalFinder</span>
       </a>
       <nav class="topnav">
         <a href="#how-it-works">How it works</a>
@@ -30,22 +30,22 @@
     <main id="home">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Near real-time product availability</p>
-          <h1>Find the product before you leave for the store.</h1>
+          <p class="eyebrow">Neighborhood store product availability</p>
+          <h1>Find what you need at a local store nearby.</h1>
           <p class="hero-text">
-            Enter a product name and instantly see which nearby store has it on the shelf right now.
-            No driving around town, no wasted trips, no guesswork.
+            Enter a product name and instantly see which nearby local shop has it available right now.
+            Support neighborhood businesses, save time, and skip unnecessary trips.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#search-panel">Check availability</a>
-            <a class="button button-secondary" href="#partners">See partner model</a>
+            <a class="button button-secondary" href="#partners">See local partner model</a>
           </div>
           <div class="trust-row">
-            <span>Carrefour</span>
-            <span>Lidl</span>
-            <span>Zabka</span>
-            <span>Dino</span>
-            <span>Local stores</span>
+            <span>ABC Grocery</span>
+            <span>Mark's Corner Shop</span>
+            <span>Green Basket</span>
+            <span>FreshMart Local</span>
+            <span>Neighborhood stores</span>
           </div>
         </div>
 
@@ -54,12 +54,12 @@
           <div class="sample-search">
             <span class="sample-chip">Nutella 350g</span>
             <span class="sample-chip">Pepsi Max</span>
-            <span class="sample-chip">Milk 2%</span>
+            <span class="sample-chip">Fresh milk 1L</span>
           </div>
           <div class="snapshot">
             <div>
               <strong>23</strong>
-              <span>stores nearby</span>
+              <span>local stores nearby</span>
             </div>
             <div>
               <strong>8</strong>
@@ -70,7 +70,7 @@
               <span>fastest route</span>
             </div>
           </div>
-          <p class="snapshot-note">MVP demo view. The data below is sample data and ready to be connected to retail API integrations.</p>
+          <p class="snapshot-note">MVP demo view. The sample below is designed for local grocery shops and independent retailers.</p>
         </aside>
       </section>
 
@@ -78,7 +78,7 @@
         <div class="panel-heading">
           <div>
             <p class="section-kicker">Search</p>
-            <h2>Check a product in stores around you</h2>
+            <h2>Check a product in local stores around you</h2>
           </div>
           <div class="live-badge">
             <span class="live-dot"></span>
@@ -116,7 +116,7 @@
         <div class="quick-tags" id="quick-tags">
           <button type="button" class="tag is-active" data-product="Nutella 350g">Nutella 350g</button>
           <button type="button" class="tag" data-product="Pepsi Max 1.5L">Pepsi Max 1.5L</button>
-          <button type="button" class="tag" data-product="Milk 2% 1L">Milk 2% 1L</button>
+          <button type="button" class="tag" data-product="Fresh milk 1L">Fresh milk 1L</button>
           <button type="button" class="tag" data-product="Coffee beans 1kg">Coffee beans 1kg</button>
         </div>
       </section>
@@ -127,7 +127,7 @@
             <div class="results-header">
               <div>
                 <p class="section-kicker">Results</p>
-                <h2 id="results-title">Stores with product: Nutella 350g</h2>
+                <h2 id="results-title">Local stores with product: Nutella 350g</h2>
               </div>
               <div class="results-summary" id="results-summary"></div>
             </div>
@@ -138,13 +138,13 @@
             <div class="map-card-header">
               <div>
                 <p class="section-kicker">Local map</p>
-                <h2>Store preview</h2>
+                <h2>Neighborhood store preview</h2>
               </div>
               <span class="map-badge">Warsaw - Mokotow</span>
             </div>
             <div id="map-grid" class="map-grid" aria-label="Illustrative store map"></div>
             <p class="map-note">
-              In the production version, this panel can be connected to Google Maps, Mapbox, or OpenStreetMap and guide the customer to the selected store.
+              In the production version, this panel can be connected to Google Maps, Mapbox, or OpenStreetMap and guide the customer to the selected neighborhood store.
             </p>
           </aside>
         </div>
@@ -153,7 +153,7 @@
       <section class="how-it-works" id="how-it-works">
         <div class="section-heading">
           <p class="section-kicker">How it works</p>
-          <h2>Simple for shoppers, valuable for stores</h2>
+          <h2>Simple for shoppers, valuable for small local stores</h2>
         </div>
         <div class="steps">
           <article class="step-card">
@@ -164,12 +164,12 @@
           <article class="step-card">
             <span class="step-number">02</span>
             <h3>The system checks stock</h3>
-            <p>The platform queries retail chains and local stores through API, POS, or ERP exports.</p>
+            <p>The platform checks inventory from independent shops through API, POS tools, or simple stock sync exports.</p>
           </article>
           <article class="step-card">
             <span class="step-number">03</span>
             <h3>See the best option</h3>
-            <p>You get a list of stores with price, distance, availability, and reservation options.</p>
+            <p>You get a list of nearby local stores with price, distance, availability, and reservation options.</p>
           </article>
         </div>
       </section>
@@ -177,24 +177,24 @@
       <section class="partners" id="partners">
         <div class="section-heading">
           <p class="section-kicker">Partnerships</p>
-          <h2>Why stores want to be part of this system</h2>
+          <h2>Why local stores want to be part of this system</h2>
         </div>
         <div class="partner-grid">
           <article class="partner-card">
             <h3>More customers at the shelf</h3>
-            <p>The store appears exactly when a customer has clear purchase intent.</p>
+            <p>A neighborhood store appears exactly when a nearby customer has clear purchase intent.</p>
           </article>
           <article class="partner-card">
             <h3>Less frustration</h3>
-            <p>Customers avoid empty shelves, which reduces disappointment with both the brand and the store.</p>
+            <p>Customers avoid wasted visits, which builds trust in the local store and keeps them coming back.</p>
           </article>
           <article class="partner-card">
             <h3>Demand insights</h3>
-            <p>Retailers can analyze the most searched products and react faster to local demand.</p>
+            <p>Small retailers can see which products are searched most often and respond faster to local demand.</p>
           </article>
           <article class="partner-card accent-card">
             <h3>Ready for integrations</h3>
-            <p>This MVP is ready to grow with authentication, reservations, and real inventory integrations.</p>
+            <p>This MVP is ready to grow with reservations, simple merchant dashboards, and real stock integrations for local shops.</p>
           </article>
         </div>
       </section>

@@ -1,7 +1,7 @@
 {
-  "name": "FindIT",
-  "short_name": "FindIT",
-  "description": "FindIT is a PWA for checking product availability in stores near you.",
+  "name": "LocalFinder",
+  "short_name": "LocalFinder",
+  "description": "LocalFinder helps people find products in nearby neighborhood stores.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f5efe5",
