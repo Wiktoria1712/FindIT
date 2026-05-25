@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalFinder - clean demo</title>
+  <meta name="theme-color" content="#dd5f2d">
+  <meta name="description" content="LocalFinder helps people find products in nearby neighborhood stores.">
+  <link rel="icon" href="localfinder-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">
+        <span class="brand-mark">LF</span>
+        <span>LocalFinder</span>
+      </a>
+      <nav class="topnav">
+        <a href="#how-it-works">How it works</a>
+        <a href="#results">Stores</a>
+        <a href="#partners">For Store Owners</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Neighborhood store product availability</p>
+          <h1>Find what you need at a local store nearby.</h1>
+          <p class="hero-text">
+            Enter a product name and instantly see which nearby local shop has it available right now.
+            Support neighborhood businesses, save time, and skip unnecessary trips.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#search-panel">Check availability</a>
+            <a class="button button-secondary" href="#partners">For Store Owners</a>
+          </div>
+          <div class="trust-row">
+            <span>ABC Grocery</span>
+            <span>Mark's Corner Shop</span>
+            <span>Green Basket</span>
+            <span>FreshMart Local</span>
+            <span>Neighborhood stores</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p class="card-kicker">Sample search</p>
+          <div class="sample-search">
+            <span class="sample-chip">Nutella 350g</span>
+            <span class="sample-chip">Pepsi Max 1.5L</span>
+            <span class="sample-chip">Fresh milk 1L</span>
+          </div>
+          <div class="snapshot">
+            <div>
+              <strong>23</strong>
+              <span>local stores nearby</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>product in stock</span>
+            </div>
+            <div>
+              <strong>3 min</strong>
+              <span>fastest route</span>
+            </div>
+          </div>
+          <p class="snapshot-note">MVP demo view for independent local retailers.</p>
+        </aside>
+      </section>
+
+      <section class="search-panel" id="search-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">Search</p>
+            <h2>Check a product in local stores around you</h2>
+          </div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            Demo live inventory
+          </div>
+        </div>
+
+        <form id="search-form" class="search-form">
+          <label class="field field-search">
+            <span>Product</span>
+            <input id="product-input" type="text" value="Nutella 350g" placeholder="e.g. Nutella 350g, Pepsi Max, fresh milk 1L">
+          </label>
+
+          <label class="field">
+            <span>Radius</span>
+            <select id="radius-select">
+              <option value="1.5">up to 1.5 km</option>
+              <option value="3" selected>up to 3 km</option>
+              <option value="5">up to 5 km</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Sort by</span>
+            <select id="sort-select">
+              <option value="distance">Nearest</option>
+              <option value="availability">Best availability</option>
+              <option value="price">Lowest price</option>
+            </select>
+          </label>
+
+          <button type="submit" class="button button-primary button-submit">Search now</button>
+        </form>
+
+        <div class="quick-tags" id="quick-tags">
+          <button type="button" class="tag is-active" data-product="Nutella 350g">Nutella 350g</button>
+          <button type="button" class="tag" data-product="Pepsi Max 1.5L">Pepsi Max 1.5L</button>
+          <button type="button" class="tag" data-product="Fresh milk 1L">Fresh milk 1L</button>
+          <button type="button" class="tag" data-product="Coffee beans 1kg">Coffee beans 1kg</button>
+        </div>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="results-layout">
+          <div class="results-column">
+            <div class="results-header">
+              <div>
+                <p class="section-kicker">Results</p>
+                <h2 id="results-title">Local stores with product: Nutella 350g</h2>
+              </div>
+              <div class="results-summary" id="results-summary"></div>
+            </div>
+            <div id="results-list" class="results-list"></div>
+          </div>
+
+          <aside class="map-card">
+            <div class="map-card-header">
+              <div>
+                <p class="section-kicker">Local map</p>
+                <h2>Neighborhood store preview</h2>
+              </div>
+              <span class="map-badge">Warsaw - Mokotow</span>
+            </div>
+            <div id="map-grid" class="map-grid" aria-label="Illustrative store map"></div>
+            <p class="map-note">Production version can connect to maps and guide the customer to the selected neighborhood store.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="partners" id="partners">
+        <div class="section-heading">
+          <p class="section-kicker">For Store Owners</p>
+          <h2>Bring your local store into the search</h2>
+        </div>
+        <div class="partner-grid">
+          <article class="partner-card">
+            <h3>Get discovered nearby</h3>
+            <p>Your store appears when nearby customers are actively looking for a product you sell.</p>
+          </article>
+          <article class="partner-card">
+            <h3>Drive real foot traffic</h3>
+            <p>People visit with intent because they already know the item is available.</p>
+          </article>
+          <article class="partner-card">
+            <h3>Start simple</h3>
+            <p>Connect through a lightweight stock panel, POS sync, or basic export.</p>
+          </article>
+          <article class="partner-card accent-card">
+            <h3>List your store</h3>
+            <p>Join LocalFinder and make your products visible to nearby shoppers.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const catalog = {
+      "Nutella 350g": [
+        { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 13.99, stock: 12, status: "good", eta: "3 min walk", district: "Old Town", x: 68, y: 38 },
+        { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 12.49, stock: 4, status: "warn", eta: "5 min drive", district: "Old Town", x: 52, y: 54 },
+        { name: "Family Market by Anna", chain: "Neighborhood Market", distance: 1.1, price: 14.5, stock: 2, status: "warn", eta: "9 min walk", district: "Riverside", x: 31, y: 41 },
+        { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 11.99, stock: 19, status: "good", eta: "6 min drive", district: "Riverside", x: 24, y: 68 },
+        { name: "FreshMart Local", chain: "Independent Store", distance: 3.6, price: 12.99, stock: 0, status: "bad", eta: "11 min drive", district: "Garden District", x: 79, y: 73 }
+      ],
+      "Pepsi Max 1.5L": [
+        { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 6.49, stock: 16, status: "good", eta: "5 min drive", district: "Old Town", x: 52, y: 54 },
+        { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 7.19, stock: 5, status: "warn", eta: "3 min walk", district: "Old Town", x: 68, y: 38 },
+        { name: "FreshMart Local", chain: "Independent Store", distance: 1.3, price: 5.99, stock: 24, status: "good", eta: "7 min drive", district: "Riverside", x: 45, y: 77 },
+        { name: "Family Market by Anna", chain: "Neighborhood Market", distance: 1.1, price: 7.49, stock: 0, status: "bad", eta: "9 min walk", district: "Riverside", x: 31, y: 41 }
+      ],
+      "Fresh milk 1L": [
+        { name: "ABC Grocery", chain: "Independent Store", distance: 0.4, price: 4.39, stock: 8, status: "good", eta: "3 min walk", district: "Old Town", x: 68, y: 38 },
+        { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 3.79, stock: 31, status: "good", eta: "6 min drive", district: "Riverside", x: 24, y: 68 },
+        { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 4.15, stock: 3, status: "warn", eta: "5 min drive", district: "Old Town", x: 52, y: 54 }
+      ],
+      "Coffee beans 1kg": [
+        { name: "Green Basket", chain: "Organic Grocery", distance: 1.7, price: 42.99, stock: 14, status: "good", eta: "6 min drive", district: "Riverside", x: 24, y: 68 },
+        { name: "FreshMart Local", chain: "Independent Store", distance: 3.6, price: 39.99, stock: 6, status: "warn", eta: "11 min drive", district: "Garden District", x: 79, y: 73 },
+        { name: "Mark's Corner Shop", chain: "Independent Store", distance: 0.8, price: 46.99, stock: 0, status: "bad", eta: "5 min drive", district: "Old Town", x: 52, y: 54 }
+      ]
+    };
+
+    const statusMeta = {
+      good: { label: "Available", note: "The product is in stock and ready to buy.", className: "status-good" },
+      warn: { label: "Low stock", note: "Stock is limited. It is worth heading there soon.", className: "status-warn" },
+      bad: { label: "Out of stock", note: "Currently unavailable in this store.", className: "status-bad" }
+    };
+
+    const productInput = document.querySelector("#product-input");
+    const radiusSelect = document.querySelector("#radius-select");
+    const sortSelect = document.querySelector("#sort-select");
+    const resultsList = document.querySelector("#results-list");
+    const resultsTitle = document.querySelector("#results-title");
+    const resultsSummary = document.querySelector("#results-summary");
+    const mapGrid = document.querySelector("#map-grid");
+    const quickTags = document.querySelector("#quick-tags");
+    const searchForm = document.querySelector("#search-form");
+
+    function getMatchingProduct(query) {
+      const normalizedQuery = query.trim().toLowerCase();
+      const productNames = Object.keys(catalog);
+      if (!normalizedQuery) return productNames[0];
+      return productNames.find((name) => name.toLowerCase() === normalizedQuery)
+        || productNames.find((name) => name.toLowerCase().includes(normalizedQuery))
+        || productNames[0];
+    }
+
+    function getStatusWeight(status) {
+      if (status === "good") return 0;
+      if (status === "warn") return 1;
+      return 2;
+    }
+
+    function formatPrice(price) {
+      return `${price.toFixed(2).replace(".", ",")} PLN`;
+    }
+
+    function filterAndSortStores(productName) {
+      const radius = Number(radiusSelect.value);
+      const sortBy = sortSelect.value;
+      const filtered = [...(catalog[productName] || [])].filter((store) => store.distance <= radius);
+      filtered.sort((left, right) => {
+        if (sortBy === "price") return left.price - right.price;
+        if (sortBy === "availability") return getStatusWeight(left.status) - getStatusWeight(right.status) || left.distance - right.distance;
+        return left.distance - right.distance;
+      });
+      return filtered;
+    }
+
+    function renderResults(productName) {
+      const stores = filterAndSortStores(productName);
+      const availableCount = stores.filter((store) => store.status === "good").length;
+      resultsTitle.textContent = `Local stores with product: ${productName}`;
+      resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now`;
+
+      if (!stores.length) {
+        resultsList.innerHTML = '<div class="empty-state"><h3>No results in the selected radius</h3><p>Increase the search radius or choose another product from the suggested tags above.</p></div>';
+        mapGrid.innerHTML = "";
+        return;
+      }
+
+      resultsList.innerHTML = stores.map((store) => {
+        const meta = statusMeta[store.status];
+        return `<article class="store-card"><div class="store-top"><div><h3>${store.name}</h3><div class="store-meta"><span>${store.chain}</span><span>-</span><span>${store.district}</span><span>-</span><span>${store.distance.toFixed(1).replace(".", ",")} km</span></div></div><span class="store-pill ${meta.className}">${meta.label}</span></div><div class="store-stock"><span class="store-price">${formatPrice(store.price)}</span><span class="stock-pill ${meta.className}">${store.stock > 0 ? `${store.stock} pcs` : "0 pcs"}</span><span>${store.eta}</span></div><p class="availability-note">${meta.note}</p><div class="store-actions"><a class="action-link" href="#map-grid">Navigate to store</a></div></article>`;
+      }).join("");
+
+      mapGrid.innerHTML = stores.map((store) => {
+        const meta = statusMeta[store.status];
+        return `<div class="map-pin" style="left:${store.x}%; top:${store.y}%"><span class="pin-dot ${meta.className}"></span><span class="pin-label">${store.chain} - ${meta.label}</span></div>`;
+      }).join("");
+    }
+
+    function syncActiveTag(productName) {
+      quickTags.querySelectorAll(".tag").forEach((tag) => {
+        tag.classList.toggle("is-active", tag.dataset.product === productName);
+      });
+    }
+
+    function runSearch(nextQuery) {
+      const matchedProduct = getMatchingProduct(nextQuery ?? productInput.value);
+      productInput.value = matchedProduct;
+      syncActiveTag(matchedProduct);
+      renderResults(matchedProduct);
+    }
+
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      runSearch();
+    });
+
+    radiusSelect.addEventListener("change", () => runSearch());
+    sortSelect.addEventListener("change", () => runSearch());
+
+    quickTags.addEventListener("click", (event) => {
+      const button = event.target.closest(".tag");
+      if (!button) return;
+      runSearch(button.dataset.product);
+    });
+
+    window.addEventListener("load", () => {
+      runSearch(productInput.value);
+    });
+  </script>
+</body>
+</html>
