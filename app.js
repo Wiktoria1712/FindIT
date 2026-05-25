@@ -383,7 +383,12 @@ window.addEventListener("load", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      await navigator.serviceWorker.register("./service-worker.js");
+      const registration = await navigator.serviceWorker.register("./service-worker.js");
+      await registration.update();
+
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        window.location.reload();
+      });
     } catch (error) {
       console.error("Service worker registration failed:", error);
     }
