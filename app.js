@@ -212,7 +212,7 @@ const statusMeta = {
   },
   warn: {
     label: "Low stock",
-    note: "Stock is limited. Reserve before you leave.",
+    note: "Stock is limited. It is worth heading there soon.",
     className: "status-warn"
   },
   bad: {
@@ -281,10 +281,8 @@ function filterAndSortStores(productName) {
 function renderResults(productName) {
   const stores = filterAndSortStores(productName);
   const availableCount = stores.filter((store) => store.status === "good").length;
-  const reservableCount = stores.filter((store) => store.reservation && store.status !== "bad").length;
-
   resultsTitle.textContent = `Local stores with product: ${productName}`;
-  resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now - ${reservableCount} with reservation`;
+  resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now`;
 
   if (!stores.length) {
     resultsList.innerHTML = `
@@ -300,8 +298,6 @@ function renderResults(productName) {
   resultsList.innerHTML = stores
     .map((store) => {
       const meta = statusMeta[store.status];
-      const reservationLabel = store.reservation && store.status !== "bad" ? "Reserve online" : "Navigate to store";
-
       return `
         <article class="store-card">
           <div class="store-top">
@@ -327,7 +323,7 @@ function renderResults(productName) {
           <p class="availability-note">${meta.note}</p>
 
           <div class="store-actions">
-            <a class="action-link" href="#map-grid">${reservationLabel}</a>
+            <a class="action-link" href="#map-grid">Navigate to store</a>
             <a class="action-link" href="#partners">Join as a partner store</a>
           </div>
         </article>

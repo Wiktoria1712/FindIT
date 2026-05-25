@@ -26,7 +26,7 @@ const catalog = {
 
 const statusMeta = {
   good: { label: "Available", note: "The product is in stock and ready to buy.", className: "status-good" },
-  warn: { label: "Low stock", note: "Stock is limited. Reserve before you leave.", className: "status-warn" },
+  warn: { label: "Low stock", note: "Stock is limited. It is worth heading there soon.", className: "status-warn" },
   bad: { label: "Out of stock", note: "Currently unavailable in this store.", className: "status-bad" }
 };
 
@@ -72,9 +72,8 @@ function filterAndSortStores(productName) {
 function renderResults(productName) {
   const stores = filterAndSortStores(productName);
   const availableCount = stores.filter((store) => store.status === "good").length;
-  const reservableCount = stores.filter((store) => store.reservation && store.status !== "bad").length;
   resultsTitle.textContent = `Local stores with product: ${productName}`;
-  resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now - ${reservableCount} with reservation`;
+  resultsSummary.textContent = `${stores.length} stores in range - ${availableCount} available now`;
   if (!stores.length) {
     resultsList.innerHTML = `<div class="empty-state"><h3>No results in the selected radius</h3><p>Increase the search radius or choose another product from the suggested tags above.</p></div>`;
     mapGrid.innerHTML = "";
@@ -82,8 +81,7 @@ function renderResults(productName) {
   }
   resultsList.innerHTML = stores.map((store) => {
     const meta = statusMeta[store.status];
-    const reservationLabel = store.reservation && store.status !== "bad" ? "Reserve online" : "Navigate to store";
-    return `<article class="store-card"><div class="store-top"><div><h3>${store.name}</h3><div class="store-meta"><span>${store.chain}</span><span>-</span><span>${store.district}</span><span>-</span><span>${store.distance.toFixed(1).replace(".", ",")} km</span></div></div><span class="store-pill ${meta.className}">${meta.label}</span></div><div class="store-stock"><span class="store-price">${formatPrice(store.price)}</span><span class="stock-pill ${meta.className}">${store.stock > 0 ? `${store.stock} pcs` : "0 pcs"}</span><span>${store.eta}</span></div><p class="availability-note">${meta.note}</p><div class="store-actions"><a class="action-link" href="#map-grid">${reservationLabel}</a><a class="action-link" href="#partners">Join as a partner store</a></div></article>`;
+    return `<article class="store-card"><div class="store-top"><div><h3>${store.name}</h3><div class="store-meta"><span>${store.chain}</span><span>-</span><span>${store.district}</span><span>-</span><span>${store.distance.toFixed(1).replace(".", ",")} km</span></div></div><span class="store-pill ${meta.className}">${meta.label}</span></div><div class="store-stock"><span class="store-price">${formatPrice(store.price)}</span><span class="stock-pill ${meta.className}">${store.stock > 0 ? `${store.stock} pcs` : "0 pcs"}</span><span>${store.eta}</span></div><p class="availability-note">${meta.note}</p><div class="store-actions"><a class="action-link" href="#map-grid">Navigate to store</a><a class="action-link" href="#partners">Join as a partner store</a></div></article>`;
   }).join("");
   mapGrid.innerHTML = stores.map((store) => {
     const meta = statusMeta[store.status];
